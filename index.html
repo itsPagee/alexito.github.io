@@ -1,137 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Will you be my Valentine?</title>
+  <title>San Valentin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: #f5f5f5;
-      font-family: 'Arial', sans-serif;
-      position: relative;
-    }
-
-    #animation-container {
-      position: relative;
-      text-align: center; /* Center text in container */
-    }
-
-    #animation {
-      width: 80%;
-      max-width: 400px;
-      height: auto;
-      display: block; /* Center the image */
-      margin: 0 auto; /* Center the image */
-    }
-
-    #buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    #yesBtn, #noBtn {
-      font-size: 1.2em;
-      padding: 15px 30px;
-      margin: 0 10px;
-      cursor: pointer;
-      transition: all 0.3s;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-weight: bold;
-    }
-
-    #yesBtn {
-      background: linear-gradient(to right, #4CAF50, #45a049); /* Green gradient */
-      box-shadow: 0px 5px 10px rgba(76, 175, 76, 0.7); /* Green shadow */
-    }
-
-    #noBtn {
-      background: linear-gradient(to right, #d9534f, #c9302c); /* Red gradient */
-      box-shadow: 0px 5px 10px rgba(217, 83, 79, 0.7); /* Red shadow */
-    }
-
-    #valentine-text, #yay-text {
-      font-size: 2.5em;
-      font-weight: bold;
-      color: black;
-      margin-top: 20px;
-    }
-
-    #footer {
-    position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      background-color: rgb(234, 241, 251);
-      color: rgb(32, 33, 36);
-      padding: 20px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 600px;
-      z-index: -1;
-    }
-    
-     #header {
-      width: 100%;
-      background-color: #0b57d0;
-      color: #fff;
-      text-align: center;
-      font-size: 12px;
-      padding: 5px;
-      position: fixed;
-      top: 0;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-
-    #disclaimer {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      #animation {
-        width: 90%;
-      }
-
-      #yesBtn, #noBtn {
-        font-size: 1em;
-        padding: 12px 24px;
-        margin: 0 8px;
-      }
-
-      #valentine-text, #yay-text {
-        font-size: 2em;
-      }
-      
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script>
   	function addContent() {
     	let additionalContent = document.createElement("div");
       additionalContent.id = "animation-content";
-      additionalContent.innerHTML = '<img id="animation" src="https://media.tenor.com/Re3rcuBu4hIAAAAi/love-couple.gif" alt="Animated Image">';
+      additionalContent.innerHTML = '<img id="animation" src="https://media1.tenor.com/m/i1rsgMyOFgcAAAAd/cat-cat-love.gif" alt="Animated Image">';
       let yayText = document.createElement("div");
       yayText.id = "yay-text";
-      yayText.textContent = "Ok yay!!!";
+      yayText.textContent = "Ya sabía que dirías que si 😊❤️";
       additionalContent.appendChild(yayText);
       document.body.appendChild(additionalContent);
-       
       }
     
     function clearContent() {
     
       // Remove specific elements while keeping the footer
-      let animationElement = document.getElementById("animation");
+      let animationElement = document.getElementById("animation-container");
+      let disclaimerElement = document.getElementById("disclaimer");
       
       let valentineText = document.getElementById("valentine-text");
       let animationButtons = document.getElementById("buttons");
@@ -139,6 +29,7 @@
         animationElement.remove();
         animationButtons.remove();
         valentineText.remove();
+        disclaimerElement.remove();
       }
       addContent();
       
@@ -167,7 +58,7 @@
 <body>
 <div id="header">Creador: Alexitoz.</div>
   <div id="animation-container">
-    <img id="animation" src="https://media1.tenor.com/m/Vy46BTSo3hsAAAAC/bear-love.gif" alt="Animated Image">
+    <img id="animation" src="https://media1.tenor.com/m/GOabrbLMl4AAAAAd/plink-cat-plink.gif"alt="Animated Image">
   </div>
   <div id="valentine-text">¿Quieres ser mi Valentin Elizalde?</div>
   <div id="buttons">
@@ -177,7 +68,7 @@
   <footer>
   <div id="footer">
     <p id="disclaimer">
-      Tu nomás dale que si. :)
+      Tú nomás dale que si. :)
     </p>
   </div>
   </footer>

@@ -5,6 +5,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    background-image: url("https://media1.tenor.com/m/KsrYRRbv14AAAAAd/star.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #animation-container {
+    width: 40%;
+    position: relative;
+    text-align: center; /* Center text in container */
+    display: flex;
+    width: relative;
+    height: relative;
+  }
+
+  #animation {
+    width: 55%;
+    max-width: 800px;
+    height: auto;
+    display: block; /* Center the image */
+    margin: auto; /* Center the image */
+    display: flex;
+  }
+
+  #buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #yesBtn, #noBtn {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  #yesBtn {
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Green gradient */
+    box-shadow: 0px 5px 10px rgba(76, 175, 76, 0.7); /* Green shadow */
+  }
+
+  #noBtn {
+    background: linear-gradient(to right, #d9534f, #c9302c); /* Red gradient */
+    box-shadow: 0px 5px 10px rgba(217, 83, 79, 0.7); /* Red shadow */
+  }
+
+  #valentine-text, #yay-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+  }
+
+  
+   #header {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  #disclaimer {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    #animation {
+      width: 90%;
+    }
+
+    #yesBtn, #noBtn {
+      font-size: 1em;
+      padding: 12px 24px;
+      margin: 0 8px;
+    }
+
+    #valentine-text, #yay-text {
+      font-size: 2em;
+    }
+    
+  }
+  </style>
   <script>
   	function addContent() {
     	let additionalContent = document.createElement("div");

@@ -9,12 +9,16 @@
   	function addContent() {
     	let additionalContent = document.createElement("div");
       additionalContent.id = "animation-content";
-      additionalContent.innerHTML = '<img id="animation" src="https://media1.tenor.com/m/i1rsgMyOFgcAAAAd/cat-cat-love.gif" alt="Animated Image">';
+      additionalContent.innerHTML = '<img id="animation" src="https://media1.tenor.com/m/3-0Df-t1sJkAAAAC/pakpakthree.gif" alt="Animated Image">';
+    	let additionalContent2 = document.createElement("div");
+      additionalContent2.id = "animation-content";
+      additionalContent2.innerHTML = '<img id="animation" src="https://media.tenor.com/RcX3hUY425kAAAAi/toothless-dragon-toothless.gif" alt="Animated Image">';
       let yayText = document.createElement("div");
       yayText.id = "yay-text";
-      yayText.textContent = "Ya sabía que dirías que si 😊❤️";
+      yayText.textContent = "Sabía que dirías que si 😊❤️";
       additionalContent.appendChild(yayText);
       document.body.appendChild(additionalContent);
+      document.body.appendChild(additionalContent2);
       }
     
     function clearContent() {
@@ -22,7 +26,7 @@
       // Remove specific elements while keeping the footer
       let animationElement = document.getElementById("animation-container");
       let disclaimerElement = document.getElementById("disclaimer");
-      
+
       let valentineText = document.getElementById("valentine-text");
       let animationButtons = document.getElementById("buttons");
       if (animationElement && valentineText && animationButtons ) {
@@ -60,15 +64,16 @@
   <div id="animation-container">
     <img id="animation" src="https://media1.tenor.com/m/GOabrbLMl4AAAAAd/plink-cat-plink.gif"alt="Animated Image">
   </div>
-  <div id="valentine-text">¿Quieres ser mi Valentin Elizalde?</div>
+  <div id="valentine-text">¿Quieres ser mi Valentín Elizalde? 💕🤠</div>
   <div id="buttons">
     <button id="yesBtn" onclick="clearContent()">SI</button>
     <button id="noBtn" onclick="adjustButtonSize()">NO</button>
   </div>
+  <br>
   <footer>
   <div id="footer">
     <p id="disclaimer">
-      Tú nomás dale que si. :)
+      Escoge bien lo que qiueres. 😉
     </p>
   </div>
   </footer>
